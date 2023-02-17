@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><a href="#">link one</a></li>
+                <li><a href="#">link two</a></li>
+                <li><a href="#">link three</a></li>
+                <li><a href="#">link four</a></li>
+                <li><a href="#">link five</a></li>
+            </ul>
+        </nav>
+        <p id="paragraph">Click a link to change this paragraph</p>
+        <script>
+            // const navLinks = document.querySelectorAll("nav ul li a");
+            // for (let i = 0; i < navLinks.length; i++) {
+            //     //navLinks[i].onclick = function () { alert("clicked!") };
+            //     navLinks[i].addEventListener("click", function () {
+            //         alert(this.innerHTML);
+            //     });
+            // }
+
+            const navLinks = document.querySelectorAll("nav ul li a");
+            for (i = 0; i < navLinks.length; i++) {
+                navLinks[i].addEventListener("click", function () {
+                    const thisLink = this.innerHTML;
+                    document.getElementById("paragraph").innerHTML = `You clicked ${thisLink}`;
+                });
+            }
+        </script>
+    </body>
+</html>
